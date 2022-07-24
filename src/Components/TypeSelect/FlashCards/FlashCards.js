@@ -53,7 +53,7 @@ function FlashCards({langOptions, langAnswer}) {
       }
     };
     fillChoices();
-  }, [deckOptions, deckCards]);
+  }, [deckOptions, deckCards, langOptions]);
 
     // generates new answer and options when options dependancy changes
     useEffect(() => {
@@ -82,7 +82,7 @@ function FlashCards({langOptions, langAnswer}) {
         startFlash();
       };
       optionsGenerate();
-    }, [options]);
+    }, [options, langOptions]);
 
   // changes total rounds based on users selection
   const roundSelection = (e) => {
