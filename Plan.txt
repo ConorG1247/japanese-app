@@ -1,0 +1,45 @@
+Learn Japanese App
+
+Logo cycles through different images - some full english, japanese, mix etc
+
+Hiragana, Katakana, Kanji?
+
+https://www.busuu.com/en/japanese/alphabet
+
+
+Learn alphabet - see Japanese alphabet have to type correct
+	maybe reverse, see eng alphabet have to write Japanese?
+	
+	Score out of 26, maybe timer how long it took?
+	Display at end which were wrong
+
+
+Flash card type system with difficulty easy, med, hard
+	See Jp word and have to type it in Eng, Hiragana or Katakana
+	
+	Maybe timed? See how many correct after 10-15-20? Maybe user choice
+
+
+
+Maybe matching game?
+
+Maybe sound clip match phoenetics game?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
