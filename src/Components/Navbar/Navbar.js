@@ -38,7 +38,7 @@ function Navbar() {
                   color={"white"}
                   bg="rgb(127, 72, 32)"
                   _focus={{ bg: "rgb(152, 86, 39)" }}
-                  _hover={{bg: "rgb(152, 86, 39)"}}
+                  _hover={{ bg: "rgb(152, 86, 39)" }}
                   onClick={() => changeNav("hiragana")}
                 >
                   Hiragana
@@ -46,7 +46,7 @@ function Navbar() {
                 <MenuItem
                   color={"white"}
                   bg="rgb(127, 72, 32)"
-                  _hover={{bg: "rgb(152, 86, 39)"}}
+                  _hover={{ bg: "rgb(152, 86, 39)" }}
                   onClick={() => changeNav("katakana")}
                 >
                   Katakana
@@ -54,10 +54,10 @@ function Navbar() {
                 <MenuItem
                   color={"white"}
                   bg="rgb(127, 72, 32)"
-                  _hover={{bg: "rgb(152, 86, 39)"}}
+                  _hover={{ bg: "rgb(152, 86, 39)" }}
                   onClick={() => changeNav("both")}
                 >
-                  Both
+                  Kanji
                 </MenuItem>
               </MenuList>
             </Menu>
@@ -69,7 +69,7 @@ function Navbar() {
             Katakana
           </div>
           <div className="navbar-button" onClick={() => changeNav("both")}>
-            Both
+            Kanji
           </div>
         </div>
       </div>
