@@ -1,9 +1,12 @@
 :root {
+  --background-colour: rgb(23, 41, 41);
   --main-text-colour: white;
+  --main-button-colour: rgb(44, 131, 102);
+  --display-colours: rgb(66, 213, 110);
 }
 
 html {
-  background-color: rgb(35, 35, 35);
+  background-color: var(--background-colour);
 }
 
 /* NAVBAR STYLING */
@@ -23,11 +26,11 @@ height: 0px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   padding: 3px 0 3px 0;
   margin-bottom: 10px;
-  background-color: rgb(149, 91, 91);
+  background-color: rgb(85, 172, 185);
 }
 
 .navbar-logo {
@@ -40,11 +43,17 @@ height: 0px;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  width: 40%;
+  width: 35%;
+  min-width: 300px;
 }
 
 .navbar-button {
   cursor: pointer;
+}
+
+.selection-title {
+  font-size: 1.5em;
+  padding: 5px 0px 5px 0px;
 }
 
 /* HIRAGANA PAGE STYLING */
@@ -54,7 +63,7 @@ height: 0px;
   flex-direction: column;
   align-items: center;
   color: var(--main-text-colour);
-  background-color: rgb(35, 35, 35);
+  background-color: var(--background-colour);
 }
 
 .hiragana-container {
@@ -78,12 +87,9 @@ height: 0px;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
+  padding: 10px;
 }
 
-.difficulty-content {
-  margin-left: -20px;
-  padding: 4px;
-}
 
 .difficulty-select {
   cursor: pointer;
@@ -94,11 +100,26 @@ height: 0px;
 
 .difficulty-select--bg {
   transition: 250ms;
-  background-color: rgb(156, 72, 72);
+  background-color: rgb(85, 169, 202);
+}
+
+.beginner::after {
+  visibility: visible;
+  content: "Beginner";
+}
+
+.intermediate::after {
+  visibility: visible;
+  content: "Intermediate";
+}
+
+.advanced::after {
+  visibility: visible;
+  content: "Advanced";
 }
 
 .difficulty-select:hover {
-  background-color: rgb(179, 84, 84);
+  background-color: rgb(98, 191, 228);
 }
 
 .type-visibility {
@@ -124,9 +145,8 @@ height: 0px;
 }
 
 .flash-title {
-  font-size: 2em;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  font-size: 1.5em;
+  padding: 10px 0 10px 0 ;
 }
 
 .flash-score {
@@ -151,7 +171,7 @@ height: 0px;
   padding-top: 25%;
   padding-bottom: 25%;
   border-radius: 5px;
-  background-color: aquamarine;
+  background-color: var(--main-button-colour);
   transition: 250ms;
 }
 
@@ -159,7 +179,7 @@ height: 0px;
   width: 3.8em;
   padding-top: 28%;
   padding-bottom: 28%;
-  background-color: rgb(81, 255, 197);
+  background-color: rgb(28, 162, 118);
 }
 
 .flash-answer {
@@ -175,7 +195,7 @@ height: 0px;
   padding-bottom: 20px;
   width: 3.8em;
   border-radius: 5px;
-  background-color: aqua;
+  background-color: var(--display-colours);
 }
 
 .flash-answer-dropdown-correct {
@@ -185,7 +205,7 @@ height: 0px;
   padding-top: 3%;
   padding-bottom: 3%;
   width: 80%;
-  background-color: greenyellow;
+  background-color: rgb(115, 177, 23);
   border-radius: 5px;
   transition: 250ms;
 }
@@ -197,9 +217,9 @@ height: 0px;
   padding-top: 3%;
   padding-bottom: 3%;
   width: 80%;
-  background-color: rgb(227, 54, 54);
+  background-color: rgb(187, 50, 50);
   border-radius: 5px;
-  transition: 250ms;
+  transition: 100ms;
 }
 
 .flash-results-dropdown {
@@ -210,9 +230,9 @@ height: 0px;
   padding-top: 3%;
   padding-bottom: 3%;
   width: 80%;
-  background-color: greenyellow;
+  background-color: rgb(115, 177, 23);
   border-radius: 5px;
-  transition: 250ms;
+  transition: 100ms;
 }
 
 .flash-buttons-container {
@@ -228,11 +248,11 @@ height: 0px;
   padding-bottom: 1%;
   margin-bottom: 5%;
   border-radius: 5px;
-  background-color: rgb(127, 234, 255);
+  background-color: rgb(85, 172, 185);
 }
 
 .flash-buttons-start:hover {
-  background-color: rgb(109, 209, 229);
+  background-color: rgb(98, 193, 212);
 }
 
 .flash-buttons-reset {
@@ -241,11 +261,11 @@ height: 0px;
   padding-bottom: 1%;
   margin-bottom: 5%;
   border-radius: 5px;
-  background-color: rgb(127, 234, 255);
+  background-color: rgb(85, 172, 185);
 }
 
 .flash-buttons-reset:hover {
-  background-color: rgb(109, 209, 229);
+  background-color: rgb(98, 193, 212);
 }
 
 /* STYLING FOR ROUND SELECTION */
@@ -274,11 +294,11 @@ height: 0px;
 }
 
 .round-select:hover {
-  background-color: aqua;
+  background-color: rgb(80, 165, 235);
 }
 
 .round-select--bg {
-  background-color: aquamarine;
+  background-color: rgb(72, 150, 213);
 }
 
 /* STYLING FOR TYPING */
@@ -322,27 +342,20 @@ height: 0px;
   margin-bottom: 40px;
   width: 3.8em;
   border-radius: 5px;
-  background-color: aqua;
+  background-color: var(--display-colours);
 }
 
 .typing-game-input {
   text-align: center;
   margin-bottom: 30px;
   border-radius: 5px;
-  border: 2px solid rgb(59, 151, 120);
-  background-color:rgb(80, 205, 163);
+  border: 2px solid rgb(59, 128, 151);
+  background-color:rgb(80, 180, 205);
 }
 
 @media (max-width: 70rem) {
   .hiragana-container {
     width: 70%;
-  }
-  .difficulty-content {
-    margin-left: 0;
-    padding: 4px;
-  }
-  .difficulty-select {
-    padding: 1px 2px 1px 2px;
   }
   .flash-options {
     width: 80%;
@@ -352,13 +365,6 @@ height: 0px;
 @media (max-width: 40rem) {
   .hiragana-container {
     width: 100%;
-  }
-  .difficulty-content {
-    margin-left: 0;
-    padding: 4px;
-  }
-  .difficulty-select {
-    padding: 1px 2px 1px 2px;
   }
   .flash-options {
     width: 90%;
@@ -371,12 +377,31 @@ height: 0px;
     height: 0px;
     visibility: hidden;
   }
+  .navbar-container {
+    justify-content: space-around;
+  }
   .navbar-container-right {
     width: 15%;
     justify-content: center;
+    min-width: 0px;
   }
   .hidden {
     visibility: visible;
+  }
+  .difficulty-select {
+    padding: 1px 2px 1px 2px;
+  }
+  .beginner::after {
+    content: "Beg";
+    padding: 10px;
+  }
+  .intermediate::after {
+    content: "Int";
+    padding: 10px;
+  }
+  .advanced::after {
+    content: "Adv";
+    padding: 10px;
   }
   .flash-container-score-rounds {
     justify-content: space-between;

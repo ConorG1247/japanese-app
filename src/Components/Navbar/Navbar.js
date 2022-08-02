@@ -33,28 +33,28 @@ function Navbar() {
                 color="white"
                 icon={<HamburgerIcon />}
               />
-              <MenuList bg="rgb(115, 65, 29)">
+              <MenuList bg="rgb(85, 172, 185)" border={"none"}>
                 <MenuItem
                   color={"white"}
-                  bg="rgb(127, 72, 32)"
-                  _focus={{ bg: "rgb(152, 86, 39)" }}
-                  _hover={{ bg: "rgb(152, 86, 39)" }}
+                  bg="rgb(85, 172, 185)"
+                  _focus={{ bg: "rgb(73, 150, 162)" }}
+                  _hover={{ bg: "rgb(73, 150, 162)" }}
                   onClick={() => changeNav("hiragana")}
                 >
                   Hiragana
                 </MenuItem>
                 <MenuItem
                   color={"white"}
-                  bg="rgb(127, 72, 32)"
-                  _hover={{ bg: "rgb(152, 86, 39)" }}
+                  bg="rgb(85, 172, 185)"
+                  _hover={{ bg: "rgb(73, 150, 162)" }}
                   onClick={() => changeNav("katakana")}
                 >
                   Katakana
                 </MenuItem>
                 <MenuItem
                   color={"white"}
-                  bg="rgb(127, 72, 32)"
-                  _hover={{ bg: "rgb(152, 86, 39)" }}
+                  bg="rgb(85, 172, 185)"
+                  _hover={{ bg: "rgb(73, 150, 162)" }}
                   onClick={() => changeNav("both")}
                 >
                   Kanji

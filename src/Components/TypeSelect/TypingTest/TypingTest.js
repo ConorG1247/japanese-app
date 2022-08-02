@@ -4,7 +4,7 @@ import TypingGame from "./TypingGame/TypingGame";
 import TypingRounds from "./TypingRounds/TypingRounds";
 import TypingScore from "./TypingScore/TypingScore";
 
-function TypingTest({langOptions, langAnswer}) {
+function TypingTest({ langOptions, langAnswer }) {
   const [gameData, setGameData] = useState();
   const [language, setLanguage] = useState();
   const [rounds, setRounds] = useState({
@@ -14,8 +14,8 @@ function TypingTest({langOptions, langAnswer}) {
   });
 
   useEffect(() => {
-    setLanguage({options: langOptions, answer: langAnswer});
-  },[langOptions, langAnswer])
+    setLanguage({ options: langOptions, answer: langAnswer });
+  }, [langOptions, langAnswer]);
 
   // function for delay used to display the result after a certain period of time
   function delay(time) {
@@ -99,17 +99,17 @@ function TypingTest({langOptions, langAnswer}) {
       <TypingScore rounds={rounds} />
       <TypingButtons startGame={startGame} resetGame={resetGame} />
       <TypingGame gameData={gameData} answerInput={answerInput} />
-      {gameData?.result && (
-        <div
-          className={
-            gameData.result === "Correct! 👍"
-              ? "flash-answer-dropdown-correct"
-              : "flash-answer-dropdown-incorrect"
-          }
-        >
-          {gameData?.result}
-        </div>
-      )}
+      <div
+        className={
+          gameData?.result === undefined
+            ? ""
+            : gameData?.result === "Correct! 👍"
+            ? "flash-answer-dropdown-correct"
+            : "flash-answer-dropdown-incorrect"
+        }
+      >
+        {gameData?.result}
+      </div>
     </div>
   );
 }
