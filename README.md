@@ -1,1 +1,1 @@
-Learn Japanese App
+Learn Japanese
